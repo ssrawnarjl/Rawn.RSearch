@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rawna.RSearch</title>
+  <meta name="description" content="Rawna.RSearch — तेज़ और साफ़ सर्च अनुभव" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img class="logo" src="/logo.png" alt="Rawna.RSearch logo" />
+      <span class="title">Rawna.<b>RSearch</b></span>
+    </div>
+    <form id="searchForm" class="searchbar" autocomplete="off">
+      <input id="q" name="q" type="search" placeholder="खोजें…" aria-label="Search" />
+      <button id="go" type="submit">Search</button>
+    </form>
+    <div class="prefs">
+      <label>भाषा
+        <select id="hl">
+          <option value="hi" selected>हिंदी</option>
+          <option value="en">English</option>
+        </select>
+      </label>
+      <label>देश
+        <select id="gl">
+          <option value="in" selected>India</option>
+          <option value="us">USA</option>
+          <option value="gb">UK</option>
+          <option value="ru">Russia</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="tabs">
+      <button class="tab active" data-tab="all">All</button>
+      <button class="tab" data-tab="news" disabled>News</button>
+      <button class="tab" data-tab="images">Images</button>
+    </nav>
+
+    <section id="info" class="info"></section>
+    <section id="answerBox" class="answer" hidden></section>
+    <section id="knowledge" class="knowledge" hidden></section>
+    <section id="results" class="results"></section>
+    <section id="imagesGrid" class="img-grid" hidden></section>
+
+    <div class="pager">
+      <button id="prev" disabled>Previous</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="next" disabled>Next</button>
+    </div>
+    <!-- brand under pager -->
+<div class="brand-below">
+  <img src="/logo.png" alt="Rawna.RSearch logo">
+  <span>Rawna.<b>RSearch</b></span>
+</div>
+
+  </main>
+
+  <footer class="footer">
+  <span>
+    Powered by
+    <a class="brand-link" href="https://www.rawnadstc.com" target="_blank" rel="noopener">
+      Rawna-DSTC Pvt. Ltd.
+    </a>
+  </span>
+  <span id="meta"></span>
+</footer>
+
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
